@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Converter</title>
+	<style>
+		body {
+			background: linear-gradient(to bottom right, #6f52b8, #c68de0);
+			color: #333;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+			transition: all 0.3s ease;
+		}
+
+		h1 {
+			background-color: #333;
+			color: #f7f7f7;
+			font-size: 28px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 20px;
+			transition: all 0.3s ease;
+		}
+
+		form {
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			margin: 50px auto;
+			max-width: 400px;
+			padding: 20px;
+			text-align: center;
+			transition: all 0.3s ease;
+		}
+
+		label {
+			display: inline-block;
+			margin: 10px 0;
+			text-align: left;
+			width: 100px;
+			transition: all 0.3s ease;
+		}
+
+		input {
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			font-size: 16px;
+			padding: 10px;
+			text-align: center;
+			transition: all 0.3s ease;
+			width: 200px;
+		}
+
+		input:focus {
+			box-shadow: 0 0 5px #333;
+			outline: none;
+		}
+
+		input[type="submit"] {
+			background-color: #333;
+			color: #f7f7f7;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #f7f7f7;
+			color: #333;
+			transition: all 0.3s ease;
+		}
+
+		.error {
+			color: red;
+			font-size: 14px;
+			margin: 5px 0;
+			transition: all 0.3s ease;
+		}
+
+		.convert {
+			background-color: #333;
+			color: #f7f7f7;
+			cursor: pointer;
+			margin-top: 20px;
+			padding: 10px 20px;
+			transition: all 0.3s ease;
+		}
+
+		.convert:hover {
+			background-color: #f7f7f7;
+			color: #333;
+			transition: all 0.3s ease;
+		}
+
+		.active {
+			background-color: #f7f7f7;
+			color: #333;
+			transition: all 0.3s ease;
+		}
+	</style>
+</head>
+<body>
+	<h1>Temperature Converter</h1>
+	<form>
+		<label for="celsius">Celsius:</label>
+		<input type="number" id="celsius" name="celsius" oninput="convertTemp()" class="active">
+		<br>
+	
+	<label for="fahrenheit">Fahrenheit:</label>
+	<input type="number" id="fahrenheit" name="fahrenheit" oninput="convertTemp()">
+	<br>
+	<input type="submit" value="Convert" onclick="convertTemp()" class="convert">
+</form>
+
+<script>
+	function convertTemp() {
+		var celsius = document.getElementById("celsius").value;
+		var fahrenheit = document.getElementById("fahrenheit").value;
+
+		if (celsius != "") {
+			var f = parseFloat(celsius) * 9 / 5 + 32;
+			document.getElementById("fahrenheit").value = f.toFixed(2);
+			document.getElementById("celsius").classList.add("active");
+			document.getElementById("fahrenheit").classList.remove("active");
+		} else if (fahrenheit != "") {
+			var c = (parseFloat(fahrenheit) - 32) * 5 / 9;
+			document.getElementById("celsius").value = c.toFixed(2);
+			document.getElementById("fahrenheit").classList.add("active");
+			document.getElementById("celsius").classList.remove("active");
+		}
+	}
+</script>
+</body>
+</html>

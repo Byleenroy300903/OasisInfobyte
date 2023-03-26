@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anime Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #6A5ACD 0%, #4B0082 100%);
+            color: #fff;
+        }
+
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+
+        section.hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background: linear-gradient(to bottom right, #FF4500, #FFA500);
+            text-align: center;
+        }
+
+
+        section.hero h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px #333;
+        }
+
+
+        section.hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px #333;
+        }
+
+
+        button {
+            background-color: #fff;
+            color: #FF4500;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+
+        button:hover {
+            background-color: #FF4500;
+            color: #fff;
+        }
+
+
+        section.anime-list {
+            margin-top: 50px;
+        }
+
+
+        section.anime-list h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 1px 1px #333;
+        }
+
+
+        section.anime-list ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+
+        section.anime-list li {
+            width: 30%;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+        section.anime-list li img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+
+        section.anime-list li h3 {
+            font-size: 2rem;
+            margin: 10px;
+            text-align: center;
+            text-shadow: 1px 1px #333;
+        }
+
+
+        section.anime-list li p {
+            font-size: 1.2rem;
+            margin: 10px;
+            text-align: justify;
+            text-shadow: 1px 1px #333;
+        }
+
+
+        footer {
+            background-color: rgba(0 , 0, 0.6);
+color: #fff;
+padding: 20px;
+text-align: center;
+margin-top: 50px;
+}
+
+
+
+
+    footer p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+
+    footer ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+
+    footer ul li {
+        margin-right: 20px;
+    }
+
+
+    footer ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+</style>
+
+
+
+
+</head>
+<body>
+
+
+    <video autoplay muted loop id="video-background">
+        <source src="abcd.mp4" type="video/mp4">
+      </video>
+      
+      <style>
+        #video-background {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+          z-index: -1;
+        }
+      </style>
+
+
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Anime List</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<main>
+    <section class="hero">
+        <h1>Anime World</h1>
+        <p>Explore the world of anime with us</p>
+        <button>Get Started</button>
+    </section>
+
+
+    <section class="anime-list">
+        <h2>Top Anime List</h2>
+        <ul>
+            <li>
+                <img src="https://wallpapercave.com/wp/wp1837539.jpg" alt="Attack on Titan">
+                <h3>Attack on Titan</h3>
+                <p>Several hundred years ago, humans were nearly exterminated by giants. Now, people live in peace behind city walls, but the threat of giants still looms.</p>
+            </li>
+            <li>
+                <img src="https://wallpapercave.com/wp/cev0wxh.jpg" alt="Death Note">
+                <h3>Death Note</h3>
+                <p>Light Yagami finds a mysterious notebook that grants him the power to kill anyone whose name and face he knows. He decides to use it to create a perfect world.</p>
+            </li>
+            <li>
+                <img src="https://wallpapercave.com/wp/wp1809894.jpg" alt="One Punch Man">
+                <h3>One Punch Man</h3>
+                <p>Saitama is a hero who can defeat any opponent with a single punch, but he becomes bored with his lack of challenge and struggles to find a worthy opponent.</p>
+            </li>
+            <li>
+                <img src="https://wallpapercave.com/wp/wp3914161.jpg" alt="Naruto">
+                <h3>Naruto</h3>
+                <p>Naruto Uzumaki dreams of becoming the Hokage, the strongest ninja in his village, but he must overcome many obstacles and enemies to achieve his goal.</p>
+            </li>
+            <li>
+                <img src="https://wallpapercave.com/wp/NbtQ1k1.jpg" alt="Fullmetal Alchemist">
+                <h3>Fullmetal Alchemist</h3>
+                <p>After attempting to resurrect their mother using alchemy, two brothers set out on a journey to find the Philosopher's Stone and restore their bodies.</p>
+            </li>
+            <li>
+                <img src="https://wallpapercave.com/wp/wp1874080.png" alt="My Hero Academia">
+                <h3>My Hero Academia</h3>
+                <p>Izuku Midoriya is born without superpowers in a world where they are the norm, but he still dreams of becoming a hero and enrolls in a prestigious hero
+academy.</p>
+</li>
+</ul>
+</section>
+
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>We are a team of anime enthusiasts who love to explore the world of anime and share our passion with others. Our mission is to provide a platform for anime fans to discover new shows and connect with other fans.</p>
+    </section>
+</main>
+
+
+<footer>
+    <p>© 2023 Anime World</p>
+    <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</footer>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
